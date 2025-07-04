@@ -1,0 +1,41 @@
+.header {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  margin-top: 0rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: wheat;
+    margin: 0rem;
+    padding: 1rem 0rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+  }
+  .header ul{
+    margin-left: 0rem;
+  }
+  
+  .header li {
+    list-style: none;
+    margin-right: 2rem;
+    font-size: 1.7rem;
+    color: wheat;
+    display: inline;
+    cursor: pointer;
+    margin-left: 1rem;
+  }
+
+  .menu-icon {
+    padding-right: 0rem;
+    font-size: 1rem;
+    color: wheat;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .home:hover{
+    text-decoration: underline;
+  }
+  
