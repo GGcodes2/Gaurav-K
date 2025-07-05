@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="header">
         <ul>
           <li className='home' onClick={() => window.open("/", "_self")}>Home</li>
-          <li>About</li>
+          <li onClick={() => window.open("/about", "_self")}>About</li>
         </ul>
         <TiThMenu className='menu-icon' onClick={() => setExtended(prev => !prev)} />
       </div>

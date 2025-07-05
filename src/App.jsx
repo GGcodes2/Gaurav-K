@@ -6,6 +6,7 @@ import Card from "./components/cards/Card";
 const App = () => {
   return (
     <>
+    
       <Navbar />
       <div className="brown">
         <h1>
@@ -43,6 +44,7 @@ const App = () => {
         </div>
       </div>
       <Card />
+      
     </>
   );
 };
