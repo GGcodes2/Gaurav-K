@@ -1,95 +1,355 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Michroma&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Base Styles */
 
-.brown{
-    margin-top: 10rem;
-    margin-bottom: 20rem;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Boldonse&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Finger+Paint&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Libertinus+Mono&family=Michroma&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Shadows+Into+Light&family=Water+Brush&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', sans-serif;
+  background: #000000;
+  color: #000;
+  overflow-x: hidden;
 }
-.brown h1{
-    justify-content: center;
-    font-family: "Boldonse", system-ui;
-  font-weight: 1000;
-  font-style: normal;
+
+.app {
+  overflow-x: hidden;
+}
+
+.fade-scale{
+  display: inline;
+}
+
+.head{
+  width: 100vw;
+  font-family: "Outfit", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  top: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  margin: 1rem;
+}
+
+.head h1{
+  margin-top: 0;
+  font-size: 2rem;
+  margin-left: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.head a{
+  list-style: none;
+  justify-content: center;
+  margin: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.head h1:hover, a:hover{
+  color: #863600;
+}
+/* Section Template */
+.section {
+  height: calc(100vh);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  transition: all 0.5s ease;
+}
+
+.intro{
+  font-family: "Poppins", sans-serif;
+}
+
+.intro:hover{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* 1. Fade & Scale */
+.fade-scale {
+  background: #dadada;
+  color: black;
+}
+
+/* 2. Parallax */
+.parallax {
+  scroll-snap-type: mandatory;
+  background-image: url("./assets/ptown2.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  display: flex;
+}
+
+.parall-text{
+  display: inline;
+}
+
+.parall-text p{
+  font-family:"Outfit", sans-serif;
+}
+
+.pune{
+  font-family: "Boldonse", system-ui;
+}
+
+.pune:hover {
+  color: #863600;
+}
+
+.bgWhite{
+}
+
+/* 3. Sticky Reveal */
+.sticky-container {
+  scroll-snap-type: mandatory;
+  height: 100vh;
+  width: 100vw;
+  display: flexbox;
+  background-color: #dadada;
+}
+
+.content-sticky{
+  color: black;
+  background-color: #dadada;
   margin: 2rem;
+  display: inline;
+  height: 100vh;
+  justify-content: center;
+}
+
+.head-sticky{
+  display: flex;
+  align-self: flex-start;
+  justify-content: flex-start;
+  margin-left: 3rem;
+  margin-top: 0;
+}
+
+
+.display{
+  margin-top: 8rem;
+  height: 20rem;
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 0rem;
+  margin-left: 0;
+  left: 0;
+}
+
+.animate1{
+  margin-left: 1rem;
+  display: flex;
+  margin-top: 1rem;
   margin-bottom: 0rem;
-  font-size: 5rem !important;
-  color: wheat;
+  height: fit-content;
+  border-radius: 30px;
+  width: 12rem;
+  transform: rotate(-20deg);
 }
 
-.brown p {
-    font-family: "Boldonse", system-ui;
-  font-weight: 1000;
-  font-style: normal;
-    margin-left: 0rem;
-  font-size: 3rem !important;
-  color: transparent; /* No fill */
-  -webkit-text-stroke: 2px wheat; /* Outline thickness and color */
-  text-stroke: 2px #000; /* Non-webkit fallback */
+
+.animate2{
+  position: relative;
+  margin-left: 10rem;
+  height: fit-content;
+  border-radius: 20px;
+  top: 0;
+  width: 12rem;
+  transform: rotate(20deg);
 }
 
-.hollow {
-    color: transparent; /* No fill */
-  -webkit-text-stroke: 2px wheat; /* Outline thickness and color */
+.animate3{
+  margin-top: 0rem;
+  margin-left: 10rem;
+  border-radius: 20px;
+  height: fit-content;
+  top: 0;
+  width: 12rem;
+  transform: rotate(-20deg);
 }
 
-.fill {
-    color: wheat; /* Fill color */
-    font-weight: 700;
+.animate1:hover, .animate2:hover, .animate3:hover{
+    border: #863600 8px solid;
 }
 
-.section1-container {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+h3{
+  z-index: 2;
+  font-family: "Poppins";
 }
 
-.section1{
-    border: wheat solid 1px;
-    height: 90%;
-    width: 90vw;
-    overflow: hidden;
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-    background-color: #753c1e;
-    color: wheat;
+/* 4. Slide In */
+
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 6. Blur on Scroll */
+.blur-section {
+  background: #333;
+  color: white;
+}
+
+.multi-box{
+  background-color: #000;
+}
+
+.multi-container{
+  background-color: #000;
+  border: #333 2px solid;
+  border-radius: 15px;
+  width: 100%;
+  height: 80%;
+  margin: 2rem;
+  display: flex;
+}
+
+.vertical{
+  margin-right: 0rem;
+}
+
+.first{
+  height: 14rem;
+  border: black 1px solid;
+  border-radius: 15px;
+  width: 40rem;
+  margin: 2rem;
+  background: linear-gradient(to right, #11998e, #24a355);
+  animation: appear linear;
+  animation-range: entry 0% cover 40%;
+  animation-timeline: scroll();
 }
 
 @keyframes appear {
-    from {
-        border-radius: 50%;
-        opacity: 0.5;
-        transform: scale(0.5);
-    }
-
-    to {
-        border-radius: 0%;
-        opacity: 1;
-        transform: scale(1);
-    }
+  from{
+    opacity: 0.5;
+    transform: scale(0.5);
+  }
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-.section1 h1 {
-    font-family: "Boldonse", system-ui;
-    font-size: 4rem;
-    text-align: start;
-    margin-top: 1rem;
-    margin-left: 1rem;
+h4{
+  margin: 1rem;
 }
 
-.section1 p {
-    font-family: "Poppins", system-ui;
-    font-weight: 100;
-    font-size: 1.6rem;
-    text-align: start;
-    margin: 1rem;
+.first:hover{
+  box-shadow: 6px 6px 6px 6px hsla(0, 0%, 97%, 0.177);
+  transform: scale(1.01);
+}
+
+.first li{
+  font-size: 1.2rem;
+}
+
+.second {
+  height: 16rem;
+  border: black 1px solid;
+  border-radius: 15px;
+  width: 40rem;
+  margin: 2rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.second:hover{
+  box-shadow: 6px 6px 6px 6px hsla(0, 0%, 97%, 0.177);
+  transform: scale(1.01);
+}
+
+.second .p1 {
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+
+.second .p2{
+  font-size: 1.4rem;
+  margin-top: 0;
+  margin-left: 1rem;
+}
+
+.third{
+  height: 32rem;
+  margin-left: 0rem;
+  width: 40rem;
+  align-self: inline;
+  color: black;
+  margin: 2rem;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgb(171, 46, 46), rgb(156, 103, 4));
+}
+
+.third:hover {
+  box-shadow: 6px 6px 6px 6px hsla(0, 0%, 97%, 0.177);
+  transform: scale(1.01);
+}
+
+.p3{
+  font-size: 1.6rem;
+  margin: 2rem;
+}
+
+.connect{
+  height: 60vh;
+  background-color: #dadada;
+  color: black;
+}
+
+.contact-form{
+  display: inline;
+  gap: 2rem;
+}
+
+.verticl-contact{
+  width: min-content;
+  display: flex;
+  gap: 2rem;
+}
+
+.from_name{
+  margin-top: 0;
+  border-radius: 10px;
+  height: 2rem;
+}
+
+
+.from_email{
+  margin-left: 2rem;
+  width: 20rem;
+  border-radius: 10px;
+  height: 2rem;
+}
+
+.message{
+  margin-top: 2rem;
+  width: 20rem;
+  height: 11rem;
+  border-radius: 10px;
+}
+
+.submit{
+  color: #863600;
+  width: 6rem;
+  height: fit-content;
+  margin: 1rem;
+  margin-bottom: 4rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+}
+
+.message-box{
+  display: flex;
+  align-items: center;
 }
