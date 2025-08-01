@@ -7,11 +7,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<App />} />
-        <Route path='/know-more' element={<KnowMore />} />
-      </Routes>
-    </BrowserRouter>
-  </StrictMode>
+  <BrowserRouter basename="/Gaurav-K">
+    <Routes>
+      <Route path='/' element={<App />} />
+      <Route path='/know-more' element={<KnowMore />} />
+    </Routes>
+  </BrowserRouter>
+</StrictMode>
+
 );
