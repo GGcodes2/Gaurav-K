@@ -1,5 +1,6 @@
 {
   "name": "portfolio2",
+  "homepage": "https://GGcodes.github.io/Gaurav-K/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview", 
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -18,6 +21,7 @@
     "clsx": "^2.1.1",
     "emailjs": "^4.0.3",
     "framer-motion": "^12.23.3",
+    "gh-pages": "^6.3.0",
     "install": "^0.13.0",
     "lottie-react": "^2.4.1",
     "npm": "^11.4.2",
