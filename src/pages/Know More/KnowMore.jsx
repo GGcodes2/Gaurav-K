@@ -82,7 +82,7 @@ const KnowMore = () => {
         </div>
         </div>
         <div className="social-box">
-          <div className="linkedIn">
+          <div onClick={()=>window.open("https://www.linkedin.com/in/gaurav-katare/", "_blank")} className="linkedIn">
             LinkedIn
           </div>
         </div>
