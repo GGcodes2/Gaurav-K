@@ -66,7 +66,7 @@ const App = () => {
       >
         <div className="head">
           <h1>Gaurav K</h1>
-          <a href="/know-more">Know More</a>
+          <a href="/Gaurav-K/know-more">Know More</a>
         </div>
         <h1 className="intro">'I Code, Not Design'</h1>
       </section>
